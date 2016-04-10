@@ -1,26 +1,26 @@
 CPPFLAGS= -c -g -Iinc -Wall -pedantic
 
-__start__: lista_stos_kolejka
-	./lista_stos_kolejka
+__start__: adt_lsq
+	./adt_lsq
 
-lista_stos_kolejka: obj/main.o obj/stos.o obj/kolejka.o obj/lista.o obj/stoper.o
-	g++ -Wall -pedantic -o lista_stos_kolejka obj/main.o obj/kolejka.o obj/stos.o obj/lista.o obj/stoper.o
+adt_lsq: obj/main.o obj/stack.o obj/queue.o obj/list.o obj/stoper.o
+	g++ -Wall -pedantic -o adt_lsq obj/main.o obj/queue.o obj/stack.o obj/list.o obj/stoper.o
 
-obj/main.o: src/main.cpp inc/stos.hh inc/lista.hh inc/kolejka.hh\
-        inc/element.hh
+obj/main.o: src/main.cpp inc/stack.hh inc/list.hh inc/queue.hh inc/node.hh
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
 
-obj/stos.o: src/stos.cpp inc/stos.hh
-	g++ ${CPPFLAGS} -o obj/stos.o src/stos.cpp
+obj/stack.o: src/stack.cpp inc/stack.hh
+	g++ ${CPPFLAGS} -o obj/stack.o src/stack.cpp
 
-obj/lista.o: src/lista.cpp inc/lista.hh 
-	g++ ${CPPFLAGS} -o obj/lista.o src/lista.cpp
+obj/list.o: src/list.cpp inc/list.hh inc/node.hh
+	g++ ${CPPFLAGS} -o obj/list.o src/list.cpp
 
-obj/kolejka.o: src/kolejka.cpp inc/kolejka.hh
-	g++ ${CPPFLAGS} -o obj/kolejka.o src/kolejka.cpp
+obj/queue.o: src/queue.cpp inc/queue.hh
+	g++ ${CPPFLAGS} -o obj/queue.o src/queue.cpp
 
 obj/stoper.o: src/stoper.cpp inc/stoper.hh
 	g++ ${CPPFLAGS} -o obj/stoper.o src/stoper.cpp
 
 clean:
-	rm -f obj/*.o lista_stos_kolejka
+	rm -f obj/*.o adt_lsq
+

@@ -3,17 +3,17 @@
 #include <time.h>
 #include <iostream>
 
-#include "IntStoper.hh"
+#include "interface_stoper.hh"
 
 using namespace std;
 
-class stoper :public IntStoper{
+class stoper :public interface_stoper{
 private:
-  clock_t poczatek,koniec ;
-  double czas;
+  clock_t beginning,end ;
+  double time;
 public:
-  void zacznij();
-  void skoncz();
-  void podaj_czas();
+  void start();
+  void finish();
+  void get_time();
 };  
 #endif

@@ -1,11 +1,13 @@
-#include "lista.hh"
+#include "list.hh"
+#include "stack.hh"
+#include "queue.hh"
 #include "stoper.hh"
-#include "kolejka.hh"
-#include "stos.hh"
+#include "node.hh"
 #include <iostream>
 
 using namespace std;
 
+
 int main(){
-return 0;
+  return 0;
 }

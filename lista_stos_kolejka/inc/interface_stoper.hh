@@ -5,15 +5,15 @@
 
 using namespace std;
 
-class IntStoper{
+class interface_stoper{
   
 public:
   
-virtual void zacznij()=0;
+virtual void start()=0;
   
-virtual void skoncz()=0;
+virtual void finish()=0;
   
-virtual void podaj_czas()=0;
+virtual void get_time()=0;
   
 };  
 #endif
