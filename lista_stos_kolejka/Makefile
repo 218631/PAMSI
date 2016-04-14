@@ -1,4 +1,4 @@
-CPPFLAGS= -c -g -Iinc -Wall -pedantic
+CPPFLAGS= -c -g -Iinc -std=c++11 -Wall -pedantic
 
 __start__: adt_lsq
 	./adt_lsq

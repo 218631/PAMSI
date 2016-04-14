@@ -1,7 +1,8 @@
 #ifndef INTSTOPER_HH
 #define INTSTOPER_HH
-#include <time.h>
+
 #include <iostream>
+#include <chrono>
 
 using namespace std;
 

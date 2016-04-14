@@ -7,12 +7,12 @@ a.out: main.o tablica.o stoper.o
 
 main.o: main.cpp tablica.hh stoper.hh
 
-	g++ -c -Wall -pedantic main.cpp
+	g++ -c -std=c++11 -Wall -pedantic main.cpp
 
 tablica.o: tablica.cpp tablica.hh
 
-	g++ -c -Wall -pedantic tablica.cpp
+	g++ -c -std=c++11 -Wall -pedantic tablica.cpp
 
 stoper.o: stoper.cpp stoper.hh
 
-	g++ -c -Wall -pedantic stoper.cpp
+	g++ -c -std=c++11 -Wall -pedantic stoper.cpp

@@ -1,14 +1,14 @@
 #include "stoper.hh"
 
 void stoper::start(){
-  beginning=clock();
+  beginning=high_resolution_clock::now();
 }
 
 void stoper::finish(){
-  end=clock();
-  time=(double)(end-beginning)/CLOCKS_PER_SEC;
+  end=high_resolution_clock::now();
+  time = duration_cast<duration<double,milli>>(end-beginning);
 }
 
 void stoper::get_time(){
-  cout << "Czas operacji dla metody '2':" << time << " [sekund]" << endl;
+  cout << "Czas operacji:" << time.count() << " [milisekund]" << endl;
 }
