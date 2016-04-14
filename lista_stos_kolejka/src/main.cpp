@@ -5,10 +5,24 @@
 #include "node.hh"
 #include <iostream>
 
+
 using namespace std;
 
 
 int main(){
-  queue x(2);
+  list lista;
+  int size;
+  stoper licznik;
+  
+  cout << "Prosze podać rozmiar listy: ";
+  cin >> size;
+  
+  licznik.start();
+
+  lista.fill(size);
+
+  licznik.finish();
+  
+  licznik.get_time();
   return 0;
 }

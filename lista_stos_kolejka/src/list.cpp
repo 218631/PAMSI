@@ -89,31 +89,10 @@ int list::size(){
   return list_size;
 }
 
-/*
+
 void list::fill(int size){
-  node* temp;
   for(int i=0; i < size; i++)
-    {
-      add(i,i);
-      }
-  temp=first;
-  while(temp->next)
-    {
-      cout <<  temp->element << endl;
-      temp=temp->next;
-    }
-  cout << endl;
-  for(int i; i<3;i++)
-    {
-      remove(i);
-    }
-  temp=first;
-    while(temp->next)
-    {
-      cout <<  temp->element << endl;
-      temp=temp->next;
-    }
-  cout<<endl;
+      add(i,0);
 }
 
-*/
+
