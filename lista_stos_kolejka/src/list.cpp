@@ -1,13 +1,14 @@
 #include "list.hh"
+#include <iostream>
 
 list::list(){
-  first->next=0;
+  first=0;
   list_size=0;
 }
 
 list::~list(){
-  node* current;
-  node* temp=first;
+  node* current=first;
+  node* temp;
   while(current)
     {
       temp=current;

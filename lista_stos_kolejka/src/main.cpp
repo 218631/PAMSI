@@ -9,5 +9,6 @@ using namespace std;
 
 
 int main(){
+  queue x(2);
   return 0;
 }
