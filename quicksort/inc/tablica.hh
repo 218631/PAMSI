@@ -2,6 +2,7 @@
 #define TABLICA_HH
 #include "IntTablica.hh"
 
+
 class Tablica :public IntTablica{
 
   int* wsk;
@@ -23,5 +24,6 @@ public:
   void mnoz(int x);
 
 };
+
 
 #endif
