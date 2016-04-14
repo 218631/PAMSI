@@ -16,7 +16,7 @@ int main(){
   cin >> c; // ostateczny rozmiar tablicy
 
     //Metoda nr. 1 zwiekszanie rozmiaru tablicy o 1
-  /*
+
   licznik.start();
   for(int i=0; i < c; i++)
     {
@@ -24,7 +24,7 @@ int main(){
     }
   licznik.finish();
   licznik.get_time();
-  */
+ 
   // Metoda nr. 2 podwajanie rozmiaru tablicy
   licznik.start();
   for(int i=0; i < c; i++)
