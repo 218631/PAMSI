@@ -1,20 +1,19 @@
 #include "quicksort.hh"
 
 int quicksort::prepare(int *tab,int left, int right){
-  return (left+(right-left))/2;
+  return left+(right-left)/2;
 }
 
 int quicksort::partition(int *tab,int left,int right){
-  pivot=prepare(tab, left, right);
-  p_value=tab[pivot];
-  switch_tab(tab,pivot,right);
+  pivot_index=prepare(tab, left, right);
+  pivot=tab[pivot_index];
+  switch_tab(tab,pivot_index,right);
   current_position=left;
-  int i;
-  for(i=left;i<right-1;i++)
+  for(int i=left;i<right;i++)
     {
-      if(tab[pivot]<p_value)
+      if(tab[i]<=pivot)
 	{
-	  switch_tab(tab, pivot, current_position);
+	  switch_tab(tab, i, current_position);
 	  current_position++;
 	}
     }
@@ -23,19 +22,10 @@ int quicksort::partition(int *tab,int left,int right){
 }
 
 void quicksort::do_quicksort(int *tab,int left,int right){
-  int i;
-  while (left<right){
-    i=partition(tab,left,right);
-    if((i-left)<=(right-i))
-      {
-	do_quicksort(tab,left,i-1);
-	left=i+1;
-      }
-    else
-      {
-	do_quicksort(tab,i+1,right);
-	right=i-1;
-      }
+  if (left < right) {
+    int i = partition(tab, left, right);
+    do_quicksort(tab, left, i - 1);
+    do_quicksort(tab, i + 1, right);
   }
 }
 

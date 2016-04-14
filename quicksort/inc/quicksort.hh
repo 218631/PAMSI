@@ -4,7 +4,7 @@
 #include "tablica.hh"
 
 class quicksort{
-  int p_value;
+  int pivot_index;
   int pivot;
   int current_position;
 public:
