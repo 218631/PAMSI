@@ -11,15 +11,17 @@ using namespace std;
 
 int main(){
   list lista;
-  int size;
+  int size=100000000;
   stoper licznik;
   
-  cout << "Prosze podać rozmiar listy: ";
-  cin >> size;
-  
+  cout << size << endl;
+    //"Prosze podać rozmiar listy: ";
+  // cin >> size;
+  lista.fill(size);
+
   licznik.start();
 
-  lista.fill(size);
+  lista.get(size-1);
 
   licznik.finish();
   
