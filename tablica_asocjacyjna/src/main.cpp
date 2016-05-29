@@ -13,10 +13,10 @@ int main(){
   list lista;
   int size=100000000;
   stoper licznik;
-
+  
   cout << size << endl;
     //"Prosze podać rozmiar listy: ";
-    // cin >> size;
+  // cin >> size;
   lista.fill(size);
 
   licznik.start();
@@ -24,7 +24,7 @@ int main(){
   lista.get(size-1);
 
   licznik.finish();
-
+  
   licznik.get_time();
   return 0;
 }

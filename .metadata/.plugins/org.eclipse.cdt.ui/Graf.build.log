@@ -1,0 +1,6 @@
+17:35:00 **** Build of configuration Default for project Graf ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+
+17:35:00 Build Finished (took 62ms)
+

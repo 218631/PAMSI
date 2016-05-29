@@ -1,0 +1,79 @@
+!SESSION 2016-05-27 18:49:37.547 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.ui 2 0 2016-05-27 18:49:44.680
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-05-27 18:49:44.680
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2016-05-27 18:49:45.073
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-05-27 18:49:45.073
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.core.resources 4 77 2016-05-27 18:50:20.885
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2016-05-27 18:50:20.885
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-05-27 18:50:20.885
+!MESSAGE /home/adrian/Desktop/Graph2.0 overlaps the workspace location: /home/adrian/Desktop/Graph2.0
+
+!ENTRY org.eclipse.core.resources 4 77 2016-05-27 18:51:04.311
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2016-05-27 18:51:04.311
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-05-27 18:51:04.311
+!MESSAGE /home/adrian/Desktop/Graph2.0 overlaps the workspace location: /home/adrian/Desktop/Graph2.0
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-27 18:51:08.350
+!MESSAGE Error: Cannot run program "stap": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "stap": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.linuxtools.internal.profiling.launch.LocalLauncher.execute(LocalLauncher.java:34)
+	at org.eclipse.linuxtools.tools.launch.core.factory.RuntimeProcessFactory.exec(RuntimeProcessFactory.java:254)
+	at org.eclipse.linuxtools.tools.launch.core.factory.RuntimeProcessFactory.exec(RuntimeProcessFactory.java:170)
+	at org.eclipse.linuxtools.systemtap.structures.process.SystemtapProcessFactory.exec(SystemtapProcessFactory.java:44)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.TapsetParser.runStap(TapsetParser.java:150)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.FunctionParser.runPass2Functions(FunctionParser.java:87)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.FunctionParser.run(FunctionParser.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-27 18:51:08.350
+!MESSAGE Error: Cannot run program "stap": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "stap": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.linuxtools.internal.profiling.launch.LocalLauncher.execute(LocalLauncher.java:34)
+	at org.eclipse.linuxtools.tools.launch.core.factory.RuntimeProcessFactory.exec(RuntimeProcessFactory.java:254)
+	at org.eclipse.linuxtools.tools.launch.core.factory.RuntimeProcessFactory.exec(RuntimeProcessFactory.java:170)
+	at org.eclipse.linuxtools.systemtap.structures.process.SystemtapProcessFactory.exec(SystemtapProcessFactory.java:44)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.TapsetParser.runStap(TapsetParser.java:150)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.ProbeParser.collect(ProbeParser.java:105)
+	at org.eclipse.linuxtools.internal.systemtap.ui.ide.structures.ProbeParser.run(ProbeParser.java:77)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 4 77 2016-05-27 18:51:27.310
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2016-05-27 18:51:27.310
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-05-27 18:51:27.310
+!MESSAGE /home/adrian/Desktop/Graph2.0 overlaps the workspace location: /home/adrian/Desktop/Graph2.0
+
+!ENTRY org.eclipse.core.resources 4 77 2016-05-27 18:51:46.513
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2016-05-27 18:51:46.513
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2016-05-27 18:51:46.513
+!MESSAGE /home/adrian/Desktop/Graph2.0 overlaps the workspace location: /home/adrian/Desktop/Graph2.0
