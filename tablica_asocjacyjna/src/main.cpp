@@ -3,29 +3,34 @@
 #include "stoper.hh"
 #include "node.hh"
 #include <iostream>
-
+#include <fstream>
 
 using namespace std;
 int main(){
 
   Hash_array Aso;
   stoper Stoper;
-  string key="dominik";
-  int value=4;
+  string key;
+  int value;
   list lista;
-
-  //cin >> value;
-  //cin >> key;
-
+  std::fstream file;
+  int c;
+  int repeat=1000000;
+  
+  file.open("1000000.txt");
+  
   Stoper.start();
-  lista.add(value,0,key);
-  Aso.Add(key,value);
+  for(int i=0;i<repeat;i++)
+    {
+      file >> key >> value;
+      Aso.Add(key,value);
+    }
   Stoper.finish();
   Stoper.get_time();
-
+  file.close();
 
   Stoper.start();
-  //Aso.Get(key);
+  c=Aso[key]; //.Get(key);
   Stoper.finish();
   Stoper.get_time();
 

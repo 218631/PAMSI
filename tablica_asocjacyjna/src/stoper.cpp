@@ -10,5 +10,5 @@ void stoper::finish(){
 }
 
 void stoper::get_time(){
-  cout << "Czas operacji:" << time.count() << " [milisekund]" << endl;
+  cout << time.count() << " [milisekund]" << endl;
 }

@@ -6,7 +6,7 @@ Hash_array::Hash_array(){
 }
 
 int Hash_array::Hash(string key){
-  int hash;
+  int hash=0;
   for(unsigned i=0; i<key.length();i++)
     hash=2*hash-key[i];
   hash=hash%Size;
