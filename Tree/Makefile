@@ -4,7 +4,7 @@ __start__: RBTree
 	./RBTree
 
 RBTree: obj/main.o obj/Tree.o  obj/stoper.o
-	g++ -Wall -pedantic -o RBTree obj/main.o obj/Tree.o obj/list.o obj/stoper.o
+	g++ -Wall -pedantic -o RBTree obj/main.o obj/Tree.o  obj/stoper.o
 
 obj/main.o: src/main.cpp  inc/Tree.hh inc/node.hh
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
