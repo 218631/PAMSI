@@ -11,11 +11,11 @@ class interface_list{
 
 public:
 
-  virtual void add(int,int)=0;
+  virtual void add(int,int,string)=0;
 
-  virtual void remove(int)=0;
+  virtual void remove(string)=0;
   
-  virtual int get(int)=0;
+  virtual int get(string)=0;
 
   virtual int size()=0;
   

@@ -1,30 +1,33 @@
 #include "list.hh"
-#include "stack.hh"
-#include "queue.hh"
+#include "Hash_array.hh"
 #include "stoper.hh"
 #include "node.hh"
 #include <iostream>
 
 
 using namespace std;
-
-
 int main(){
+
+  Hash_array Aso;
+  stoper Stoper;
+  string key="dominik";
+  int value=4;
   list lista;
-  int size=100000000;
-  stoper licznik;
-  
-  cout << size << endl;
-    //"Prosze podać rozmiar listy: ";
-  // cin >> size;
-  lista.fill(size);
 
-  licznik.start();
+  //cin >> value;
+  //cin >> key;
 
-  lista.get(size-1);
+  Stoper.start();
+  lista.add(value,0,key);
+  Aso.Add(key,value);
+  Stoper.finish();
+  Stoper.get_time();
 
-  licznik.finish();
-  
-  licznik.get_time();
+
+  Stoper.start();
+  //Aso.Get(key);
+  Stoper.finish();
+  Stoper.get_time();
+
   return 0;
 }

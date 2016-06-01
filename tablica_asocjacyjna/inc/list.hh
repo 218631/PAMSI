@@ -4,6 +4,8 @@
 #include "interface_list.hh"
 #include "node.hh"
 
+using namespace std;
+
 class list :public interface_list{
 
   int list_size;
@@ -16,15 +18,14 @@ class list :public interface_list{
   
   ~list();
   
-  void add(int,int);
+  void add(int,int,string);
   
-  void remove(int);
+  void remove(std::string key);
   
-  int get(int);
+  int get(std::string);
   
   int size();
 
-  void fill(int);
 };
 
 #endif

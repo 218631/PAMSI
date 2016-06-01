@@ -18,7 +18,7 @@ list::~list(){
   list_size=0;
   first=0;
 }
-void list::add(int element, int position){
+void list::add(int element, int position , std::string key){
   node* temp;
   node* current=first;
   if(position==0){
@@ -26,6 +26,7 @@ void list::add(int element, int position){
     first=new node;
     first->next=temp;
     first->element=element;
+   // first->key=key;
     list_size++;
   }
   else{
@@ -39,60 +40,49 @@ void list::add(int element, int position){
     temp=current->next;
     current->next=new node;
     current->next->element=element;
+    current->next->key=key;
     current->next->next=temp;
     list_size++;
-  }
-}
-  
-void list::remove(int position){
-  node* temp;
-  node* current;
-  if(position<0 or position>(size()-1))
-    throw "Przekroczony zakres \n";
-  else{
-    current=first;
-    int i=0;
-    while(i<position-1)
-      {
-	current=current->next;
-	i++;
-      }
-    temp=current->next;
-    delete temp;
-    current->next=current->next->next;
-    list_size--;
-  }
+    }
 }
 
-int list::get(int position){
+void list::remove(std::string key){
+  node* current;
   node* temp;
-  if(position<0 or position>(size()-1))
-    throw "Przekroczony zakres \n";
-  else{
-  if(position==0)
+  current=first;
+
+  for(int i=0;i<size();i++)
     {
-      return first->element;
+      if(current->key==key){
+	temp=current->next;
+	delete temp;
+      }
+      else{
+	current=current->next;
+      }
     }
-  else
-    {
-      temp=first;
-      for(int i=0;i<position;i++)
-	{
-	  temp=temp->next;
-	}
-      return temp->element;
-    }
-  }
 }
+
+int list::get(std::string key){
+  node* current;
+  current=first;
+  for(int i=0;i<size();i++)
+    {
+      if(current->key==key)
+	{
+	  return current->element;
+	}
+      else
+	{
+	  current=current->next;
+	}
+    }
+  return 0;
+}
+
 
 int list::size(){
   return list_size;
-}
-
-
-void list::fill(int size){
-  for(int i=0; i < size; i++)
-      add(i,0);
 }
 
 

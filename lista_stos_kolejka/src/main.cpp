@@ -11,7 +11,7 @@ using namespace std;
 
 int main(){
   list lista;
-  int size=100000000;
+  int size=100;
   stoper licznik;
 
   cout << size << endl;
