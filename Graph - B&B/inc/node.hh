@@ -2,11 +2,10 @@
 #define NODE_HH
 
 class node{
+  int element;
   node* next;
-  int vertex;
-  int value;
   friend class list;
-  friend class Graph;
+  friend class Find_path;
 };
 
 #endif
