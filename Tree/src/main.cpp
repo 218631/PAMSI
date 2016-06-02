@@ -2,34 +2,40 @@
 #include "stoper.hh"
 #include "Tree.hh"
 #include <cmath>
-#define size 1000000
 
 int main(){
   stoper Stoper;
-  Tree tree;
-  int element;
+  Tree tree_search;
   
-  //dodawanie
-  Stoper.start();
 
-  for(int i=0;i<size-1;i++)
+  unsigned size = 1;
+  for (unsigned k = 1; k <= 6; k++)
     {
-      element=rand()%10;
-      tree.add(element);
+      size*=10;
+      cout<<"dodawanie, rozmiar " << size << ":"<<endl;
+      for(int j=0;j<10;j++){
+	Tree tree; 
+	Stoper.start();
+	for(int i=0;i<size;i++)
+	  {
+	    
+	    tree.add(i);
+	  }
+	Stoper.finish();
+	Stoper.get_time();
+	tree_search=tree;
+      }
+      
+      
+      cout<<"wyszukiwanie:"<<endl;
+      for(int j=0;j<10;j++){
+	Stoper.start();
+	
+	tree_search.find(size-1);
+	
+	Stoper.finish();
+	Stoper.get_time();
+      }
     }
-  tree.add(size);
-
-  Stoper.finish();
-  Stoper.get_time();
-
-
-  //wyszukiwanie
-  Stoper.start();
-
-  tree.find(size);
-
-  Stoper.finish();
-  Stoper.get_time();
-  
-return 0;
+  return 0;
 }

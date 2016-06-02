@@ -1,6 +1,7 @@
 #ifndef NODE_HH
 #define NODE_HH
 #include <string>
+#include <iostream>
 
 class node{
   int element;
