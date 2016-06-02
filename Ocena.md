@@ -33,3 +33,19 @@ Poprawne ADT dla listy, stosu i kolejki.
 ## Lab5 - sortowanie
 
 ## Lab6 - tablica asocjacyjna
+
+**Ocena: 5,0**
+
+## Lab7 - drzewa
+
+**Ocena: 5,0**
+
+## Lab8 - grafy (dfs,bfs)
+
+**Ocena: 5,0**
+
+## Lab9 - grafy (b&b)
+
+Brak zadania
+
+**Ocena: 2,0**
