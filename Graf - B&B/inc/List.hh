@@ -4,24 +4,24 @@
 #include "interface_list.hh"
 #include "node.hh"
 
-class list :public interface_list{
+class List :public interface_list{
 
-  int list_size;
+  int List_size;
 
   node* first;
-
+  
  public:
 
-  list();
-
-  //~list();
-
+  List();
+  
+  ~List();
+  
   void add(int,int);
-
+  
   void remove(int);
-
+  
   int get(int);
-
+  
   int size();
 
   void fill(int);

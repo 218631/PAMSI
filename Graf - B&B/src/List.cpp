@@ -1,12 +1,12 @@
-#include "list.hh"
+#include "List.hh"
 #include <iostream>
 
-list::list(){
+List::List(){
   first=0;
-  list_size=0;
+  List_size=0;
 }
-/*
-list::~list(){
+
+List::~List(){
   node* current=first;
   node* temp;
   while(current)
@@ -15,11 +15,10 @@ list::~list(){
       current=current->next;
       delete temp;
       }
-  list_size=0;
+  List_size=0;
   first=0;
 }
-*/
-void list::add(int element, int position){
+void List::add(int element, int position){
   node* temp;
   node* current=first;
   if(position==0){
@@ -27,7 +26,7 @@ void list::add(int element, int position){
     first=new node;
     first->next=temp;
     first->element=element;
-    list_size++;
+    List_size++;
   }
   else{
     int i=0;
@@ -41,11 +40,11 @@ void list::add(int element, int position){
     current->next=new node;
     current->next->element=element;
     current->next->next=temp;
-    list_size++;
+    List_size++;
   }
 }
-
-void list::remove(int position){
+  
+void List::remove(int position){
   node* temp;
   node* current;
   if(position<0 or position>(size()-1))
@@ -61,11 +60,11 @@ void list::remove(int position){
     temp=current->next;
     delete temp;
     current->next=current->next->next;
-    list_size--;
+    List_size--;
   }
 }
 
-int list::get(int position){
+int List::get(int position){
   node* temp;
   if(position<0 or position>(size()-1))
     throw "Przekroczony zakres \n";
@@ -86,12 +85,12 @@ int list::get(int position){
   }
 }
 
-int list::size(){
-  return list_size;
+int List::size(){
+  return List_size;
 }
 
 
-void list::fill(int size){
+void List::fill(int size){
   for(int i=0; i < size; i++)
       add(i,0);
 }

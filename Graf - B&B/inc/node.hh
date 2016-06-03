@@ -1,11 +1,10 @@
 #ifndef NODE_HH
 #define NODE_HH
 
-class node{
+struct node{
   int element;
   node* next;
-  friend class list;
-  friend class Find_path;
+  friend class List;
 };
 
 #endif
